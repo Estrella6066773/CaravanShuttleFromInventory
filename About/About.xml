@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+  <name>远行队背包里的穿梭机 (Shuttle In Caravan Inventory)</name>
+  <author>Estrella6066</author>
+  <packageId>Estrella6066.caravanShuttleFromInventory</packageId>
+  <modVersion>1.0.0</modVersion>
+  <supportedVersions>
+    <li>1.6</li>
+    <li>1.7</li>
+  </supportedVersions>
+  <description>客运穿梭机只要在远行队背包里，远行队就有穿梭机能力，可以起飞，也可以从货物里加油。穿梭机被收成迷你化物品时也算。
+
+起飞仍然检查燃料、载重和冷却。航程上限不变。地图上停着的穿梭机、任务穿梭机不受影响。
+
+需要 Harmony 和奥德赛。
+</description>
+  <modDependencies>
+    <li>
+      <packageId>brrainz.harmony</packageId>
+      <displayName>Harmony</displayName>
+      <!--
+        这两个地址不是装饰：ModMetaData.ValidateDependencies 会在「既没有 downloadUrl 也没有 steamWorkshopUrl」
+        时认为该依赖项不合格，除了打印一条警告，还会把这条依赖整个从列表里删掉。
+      -->
+      <steamWorkshopUrl>steam://url/CommunityFilePage/2009463077</steamWorkshopUrl>
+      <downloadUrl>https://github.com/pardeike/HarmonyRimWorld/releases/latest</downloadUrl>
+    </li>
+    <li>
+      <packageId>Ludeon.RimWorld.Odyssey</packageId>
+      <displayName>RimWorld - Odyssey</displayName>
+    </li>
+  </modDependencies>
+  <loadAfter>
+    <li>brrainz.harmony</li>
+    <li>Ludeon.RimWorld.Odyssey</li>
+    <li>lllr.ShuttleStorage</li>
+    <li>kearril.passengershuttlehavenocooldown</li>
+    <li>kearril.choosewheretoland</li>
+    <li>kearril.transporterloadunlock</li>
+  </loadAfter>
+</ModMetaData>
